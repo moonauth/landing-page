@@ -62,11 +62,11 @@ export default function Home() {
 			  		<h1 className="text-7xl mb-10 leading-1 font-dm_serif">Passwords are about to become <h1 className="text-transparent bg-clip-text bg-gradient-to-tl from-g_blue to-g_orange">obsolete.</h1></h1>
 			  		<h2 className="text-2xl mb-1 font-dm_sans">We are still in development</h2>
             <h2 className="text-2xl mb-4 font-dm_sans">Join us and be part of this journey!</h2>
-            <div className="mt-16 font-dm_sans font-medium">
-              <a onClick={() => handle("discord")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5" ><img src="/social/discord.svg" className="w-5 inline-block mr-3 fill-current opacity-70"></img>Discord</a>
-              <a onClick={() => handle("slack")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 ml-5" ><img src="/social/slack.svg" className="w-5 inline-block mr-3 fill-current opacity-70"></img>Slack</a>
-              <a onClick={() => handle("github")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 ml-5" ><img src="/social/twitter.svg" className="w-5 inline-block mr-3 fill-current opacity-70"></img>Twitter</a>
-              <a onClick={() => handle("twitter")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 ml-5" ><img src="/social/github.svg" className="w-5 inline-block mr-3 fill-current opacity-70"></img>GitHub</a>
+            <div className="w-full flex mt-16 font-dm_sans font-medium md:w-11/12">
+              <a onClick={() => handle("discord")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5" ><img src="/social/discord.svg" className="w-5 inline-block mr-3 fill-current opacity-70"></img>Discord</a>
+              <a onClick={() => handle("slack")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5" ><img src="/social/slack.svg" className="w-5 inline-block mr-3 fill-current opacity-70"></img>Slack</a>
+              <a onClick={() => handle("github")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5" ><img src="/social/twitter.svg" className="w-5 inline-block mr-3 fill-current opacity-70"></img>Twitter</a>
+              <a onClick={() => handle("twitter")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5" ><img src="/social/github.svg" className="w-5 inline-block mr-3 fill-current opacity-70"></img>GitHub</a>
             </div>
 			  	</div>
 			  </div>
