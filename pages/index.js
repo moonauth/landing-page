@@ -1,82 +1,78 @@
 import Head from 'next/head'
+import toast, { Toaster } from 'react-hot-toast';
+
+function handle(platform){
+  toast.loading('Redirecting...', {duration: 1000})
+  setTimeout(function () {
+    toast.success("Success!", {icon: "🚀"})
+    setTimeout(function () {
+      if(platform === "discord") {
+        window.open("https://discord.gg/HbzXH9shbM", "_blank");
+      }
+   	  else if(platform === "slack") {
+   	  	window.open("https://moonauth.slack.com", "_blank");
+      }
+   	  else if(platform === "twitter") {
+   	  	window.open("https://twitter.com/moonauthhq", "_blank");
+      }
+      else if(platform === "github") {
+        window.open("https://github.com/moonauth", "_blank");
+      }
+      }, 300);
+  }, 700);
+}
+
+const notify = () => toast.success('Link copied to clipboard!');
+//const redirect = () => toast.loading('Redirecting...')
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div>
+
+      <Toaster
+        position="bottom-center"
+        reverseOrder={false}
+        toastOptions={{
+          style: {
+            background: '#253141',
+            color: '#FFF',
+            borderRadius: "1rem",
+            padding: "0.7rem",
+            paddingLeft: "1rem",
+            fontFamily: "DM Sans, sans-serif",
+          },
+        }}
+      />
+
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Moonauth: Coming Soon</title>
+        <link rel="icon" href="/favicon.svg" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+      <main className="bg-moonwhite h-screen">
+        <div className="w-full flex flex-wrap md:h-screen pt-0">
+			  <div className= "md:pt-0 w-full md:flex-1 md:order-last">
+			  	<img src="/hand.jpg" className="w-full h-64 md:h-full object-cover" />
+			  </div>
+			  <div className="w-screen md:p-36 md:w-6/12 flex justify-center items-center relative text-moonblack">
+			  	<div className="relative md:p-2 md:text-left">
+            <div className="w-36 pb-10">
+              <img src="/moonauth.svg"></img>
+            </div>
+			  		<h1 className="text-7xl mb-10 leading-1 font-dm_serif">Passwords are about to become <h1 className="text-transparent bg-clip-text bg-gradient-to-tl from-g_blue to-g_orange">obsolete.</h1></h1>
+			  		<h2 className="text-2xl mb-1 font-dm_sans">We are still in development</h2>
+            <h2 className="text-2xl mb-4 font-dm_sans">Join us and be part of this journey!</h2>
+            <div className="mt-16 font-dm_sans font-medium">
+              <a onClick={() => handle("discord")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5" ><img src="/social/discord.svg" className="w-5 inline-block mr-3 fill-current opacity-70"></img>Discord</a>
+              <a onClick={() => handle("slack")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 ml-5" ><img src="/social/slack.svg" className="w-5 inline-block mr-3 fill-current opacity-70"></img>Slack</a>
+              <a onClick={() => handle("github")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 ml-5" ><img src="/social/twitter.svg" className="w-5 inline-block mr-3 fill-current opacity-70"></img>Twitter</a>
+              <a onClick={() => handle("twitter")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 ml-5" ><img src="/social/github.svg" className="w-5 inline-block mr-3 fill-current opacity-70"></img>GitHub</a>
+            </div>
+			  	</div>
+			  </div>
+		    </div>
       </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
+      
     </div>
   )
 }
