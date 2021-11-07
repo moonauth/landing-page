@@ -67,8 +67,8 @@ export default function Home() {
               <div className="w-full flex-1 mt-16 font-dm_sans md:w-11/12 md:visible invisible">
                 <button onClick={() => handle("discord")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5 font-medium" ><img src="/social/discord.svg" className="w-5 inline-flex mr-3 fill-current opacity-70"></img>Discord</button>
                 <button onClick={() => handle("slack")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5 font-medium" ><img src="/social/slack.svg" className="w-5 inline-flex mr-3 fill-current opacity-70"></img>Slack</button>
-                <button onClick={() => handle("github")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5 font-medium" ><img src="/social/twitter.svg" className="w-5 inline-flex mr-3 fill-current opacity-70"></img>Twitter</button>
-                <button onClick={() => handle("twitter")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5 font-medium" ><img src="/social/github.svg" className="w-5 inline-flex mr-3 fill-current opacity-70"></img>GitHub</button>
+                <button onClick={() => handle("twitter")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5 font-medium" ><img src="/social/twitter.svg" className="w-5 inline-flex mr-3 fill-current opacity-70"></img>Twitter</button>
+                <button onClick={() => handle("github")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5 font-medium" ><img src="/social/github.svg" className="w-5 inline-flex mr-3 fill-current opacity-70"></img>GitHub</button>
               </div>
 			    	</div>
 			    </div>
