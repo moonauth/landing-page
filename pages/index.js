@@ -47,9 +47,10 @@ export default function Home() {
       <Head>
         <title>Moonauth: Coming Soon</title>
         <link rel="icon" href="/favicon.svg" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <main className="bg-moonwhite md:h-screen h-full">
+      <main className="bg-moonwhite md:h-full h-full">
         <div className="w-full flex flex-wrap h-full">
 
 			    <div className= "md:pt-0 w-full md:flex-1 md:order-last">
@@ -65,10 +66,10 @@ export default function Home() {
 			    		  <h2 className="text-2xl mb-1 font-dm_sans">We are still in development</h2>
                 <h2 className="text-2xl mb-4 font-dm_sans">Join us and be part of this journey!</h2>
               <div className="w-full flex-1 mt-16 font-dm_sans md:w-11/12 md:visible invisible">
-                <button onClick={() => handle("discord")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5 font-medium" ><img src="/social/discord.svg" className="w-5 inline-flex mr-3 fill-current opacity-70"></img>Discord</button>
-                <button onClick={() => handle("slack")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5 font-medium" ><img src="/social/slack.svg" className="w-5 inline-flex mr-3 fill-current opacity-70"></img>Slack</button>
-                <button onClick={() => handle("twitter")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5 font-medium" ><img src="/social/twitter.svg" className="w-5 inline-flex mr-3 fill-current opacity-70"></img>Twitter</button>
-                <button onClick={() => handle("github")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5 font-medium" ><img src="/social/github.svg" className="w-5 inline-flex mr-3 fill-current opacity-70"></img>GitHub</button>
+                <button onClick={() => handle("discord")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5 font-medium mb-5" ><img src="/social/discord.svg" className="w-5 inline-flex mr-3 fill-current opacity-70"></img>Discord</button>
+                <button onClick={() => handle("slack")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5 font-medium mb-5" ><img src="/social/slack.svg" className="w-5 inline-flex mr-3 fill-current opacity-70"></img>Slack</button>
+                <button onClick={() => handle("twitter")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5 font-medium mb-5" ><img src="/social/twitter.svg" className="w-5 inline-flex mr-3 fill-current opacity-70"></img>Twitter</button>
+                <button onClick={() => handle("github")} className="bg-moonwhite_dark hover:bg-moonwhite_hover transition-all text-moonblack p-3 rounded-2xl px-5 mr-5 font-medium mb-5" ><img src="/social/github.svg" className="w-5 inline-flex mr-3 fill-current opacity-70"></img>GitHub</button>
               </div>
 			    	</div>
 			    </div>
